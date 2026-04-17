@@ -15,7 +15,7 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-xs font-mono text-muted-foreground mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-glow-pulse" />
+          <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
           Available for opportunities · {profile.location}
         </motion.div>
 
