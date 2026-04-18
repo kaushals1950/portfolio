@@ -9,25 +9,32 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import emailjs from "emailjs-com";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(`Portfolio contact from ${data.get("name")}`);
-    const body = encodeURIComponent(
-      `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`
-    );
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      setLoading(false);
-      toast.success("Opening your email client…");
-      (e.target as HTMLFormElement).reset();
-    }, 600);
-  };
+  e.preventDefault();
+  setLoading(true);
+
+  emailjs.sendForm(
+    "service_cj4mk3j",    
+    "template_6j9f8m9",    
+    e.currentTarget,
+    "VYr26JdFyopbv4LEY"    
+  )
+  .then(() => {
+    toast.success("Message sent successfully.");
+    setLoading(false);
+    (e.target as HTMLFormElement).reset();
+  })
+  .catch((error) => {
+    console.error(error);
+    toast.error("Failed to send message.");
+    setLoading(false);
+  });
+};
 
   const items = [
     { Icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },

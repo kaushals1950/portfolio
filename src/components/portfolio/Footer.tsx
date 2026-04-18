@@ -6,7 +6,7 @@ export const Footer = () => (
       <p>
         © {new Date().getFullYear()} <span className="text-foreground font-medium">{profile.name}</span>. Crafted with React & Framer Motion.
       </p>
-      <p className="font-mono text-xs">Designed & built in Varanasi 🇮🇳</p>
+      <p className="font-mono text-xs">Designed & built in Greater Noida 🇮🇳</p>
     </div>
   </footer>
 );

@@ -64,7 +64,7 @@ export const Hero = () => {
             </a>
           </Button>
           <Button asChild size="lg" variant="ghost" className="hover:bg-primary/10">
-            <a href="#" download>
+            <a href="/resume.pdf" download>
               <Download size={18} className="mr-1" /> Resume
             </a>
           </Button>
@@ -94,6 +94,27 @@ export const Hero = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* RIGHT SIDE (IMAGE) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex justify-center md:justify-end"
+        >
+          <div className="relative">
+            
+            {/* Glow Background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 blur-3xl opacity-30 rounded-full" />
+
+            {/* Profile Image */}
+            <img
+              src="/images/profile.png"
+              alt="Kaushal"
+              className="relative w-72 h-72 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-2xl"
+            />
+          </div>
+        </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}

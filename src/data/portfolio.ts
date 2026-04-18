@@ -1,7 +1,7 @@
 export const profile = {
   name: "Kaushal Singh",
   role: "Software Developer | Full Stack Developer",
-  location: "Varanasi, Uttar Pradesh, India",
+  location: "Greater Noida, Uttar Pradesh, India",
   email: "kaushalgurwat1@gmail.com",
   phone: "+91-9696130260",
   linkedin: "https://linkedin.com/in/kaushals1950",
@@ -18,12 +18,12 @@ export const skills = [
   { name: "React.js", level: 82, category: "Framework" },
   { name: "MySQL", level: 80, category: "Database" },
   { name: "MongoDB", level: 72, category: "Database" },
-  { name: "C", level: 75, category: "Language" },
+  { name: "C", level: 65, category: "Language" },
   { name: "Data Structures", level: 85, category: "Core" },
   { name: "OOP", level: 88, category: "Core" },
 ];
 
-export const tools = ["Git", "VS Code", "IntelliJ IDEA", "Eclipse", "Postman", "Computer Networks"];
+export const tools = ["Git", "VS Code", "IntelliJ IDEA", "Eclipse", "Postman"];
 
 export const education = [
   {
@@ -48,19 +48,27 @@ export const projects = [
       "An end-to-end legal-tech platform offering AI-driven Q&A, automated document generation, and seamless lawyer connections — making legal help accessible to everyone.",
     tech: ["Spring Boot", "React.js", "MongoDB", "AI/ML"],
     github: "#",
-    demo: "#",
+    demo: "https://dhaaraai.vercel.app/",
     accent: "from-primary to-secondary",
   },
   {
-    title: "RxVision",
-    tagline: "Smart healthcare prescription scanner",
-    description:
-      "Healthcare platform that uses OCR to scan handwritten prescriptions, extract medication data, and surface intelligent medicine recommendations for patients.",
-    tech: ["Spring Boot", "React.js", "MySQL", "OCR"],
-    github: "#",
-    demo: "#",
-    accent: "from-accent to-primary",
-  },
+  title: "MediSmart",
+  tagline: "Full-stack telehealth platform with live consultations",
+  description:
+    "A complete telehealth application featuring secure JWT authentication, appointment booking, doctor recommendations, medical record management, OTP-based password reset, and real-time consultations using Agora video and STOMP chat.",
+  tech: [
+    "Spring Boot",
+    "Next.js 14",
+    "MongoDB",
+    "JWT",
+    "WebSocket/STOMP",
+    "Agora SDK",
+    "Tailwind CSS"
+  ],
+  github: "https://github.com/your-username/medismart", // update this
+  demo: "https://medi-smart-eta.vercel.app",
+  accent: "from-accent to-primary",
+},
 ];
 
 export const certifications = [
